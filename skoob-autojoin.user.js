@@ -29,15 +29,16 @@
     const divs = document.querySelectorAll("div.actions");
 
     const btns = Array.from(divs).filter(
-        (div) => div.children[0].checkVisibility === true
+        (div) => div.children[0].checkVisibility() === true
     );
     const howManyMissingToEnter = btns.length;
-  
+
     function enterAll() {
         btns.forEach((button) => {
             if (button.checkVisibility() === false) return;
-            button.click();
+            button.firstElementChild.click();
         });
+
         alert("Já foi tudo, pode fechar a página!");
     }
 
@@ -51,7 +52,8 @@
     const missingText = document.createElement("p");
     howManyMissingToEnter
         ? (missingText.innerHTML = `Faltam ${howManyMissingToEnter} cortesias para entrar`)
-    : (missingText.innerHTML = `Ja entrou em todas as cortesias!`);
+        : (missingText.innerHTML = `Ja entrou em todas as cortesias!`);
+
     missingText.style = "margin-left: 10px;";
     header2.appendChild(missingText);
 })();
