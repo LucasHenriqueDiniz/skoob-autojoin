@@ -1,7 +1,7 @@
 ## Installation
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/).
-2. Open the script in [raw view](https://github.com/LucasHenriqueDiniz/skoob-autojoin/blob/main/skoob-autojoin.user.js).
+2. Open the script in [raw view](https://github.com/LucasHenriqueDiniz/skoob-autojoin/raw/main/skoob-autojoin.user.js).
 3. Install.
 
 ## Images
